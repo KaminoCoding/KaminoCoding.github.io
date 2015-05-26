@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Standard Meta -->
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+    <!-- Site Properities -->
+    <title>KaminoCoding - Invincible Hamster Mod</title>
+
+    <link rel="stylesheet" type="text/css" href="assets/semantic.css">
+    <link rel="stylesheet" href="assets/style.css">
+
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.js"></script>
+    <script src="assets/semantic.js"></script>
+    <style type="text/css">
+        /*
+        #home{
+            padding-left: 5em;
+            padding-right: 5em;
+            padding-bottom: 3.5em;
+            padding-top: 3.5em;
+        }
+*/
+    </style>
+</head>
+
+<body id="home">
+
+    <div class="ui masthead segment">
+        <div class="ui centered page grid">
+            <div class="sixteen wide column">
+                <div class="ui inverted blue menu">
+
+                    <a class="header item" href="http://kaminocoding.github.io">
+                        KaminoCoding
+                    </a>
+                    <a href="about.html" class="item">About Me</a>
+                    <div class="ui pointing dropdown link item" tabindex="-1">
+                        <i class="dropdown icon" tabindex="0"></i>
+                        <span class="text">Modding Projects</span>
+                        <div class="menu" tabindex="-1">
+                            <a class="item" href="../commumod/">CommuMod</a>
+                            <a href="../better-food/" class="item">Better Foods</a>
+                            <a href="../invincible-hamster/" class="item">Invincible Hamster</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--    Main page section -->
+
+    <div class="ui vertical segment">
+        <div class="ui centered page grid">
+            <div class="fourteen wide column">
+                <h1 class="ui header">Better Foods Mod</h1>
+                <p>This is a mod that i'm working on to make the creation of more complex foods avaialable in minecraft. I'm including a list of items that I've decided would be for the first release. The first alpha release is avaialble <a href="https://mods.io/mods/1088-better-foods-mod">here.</a>
+                </p>
+                <div class="ui divider"></div>
+                <div class="ui list">
+                    <div class="item">Ice Cream</div>
+                    <div class="item">Hot Dogs &amp; Hamburgers</div>
+                    <div class="item">Grill Block</div>
+                    <div class="item">Propane Gas (maybe)</div>
+                    <div class="item">Peanuts</div>
+                    <div class="item">Hazelnuts</div>
+                    <div class="item">Peanut Butter</div>
+                    <div class="item">Nutella</div>
+                    <div class="item">Ice Creams Bars</div>
+                    <div class="item">Freezer (maybe)</div>
+                    <div class="item">French Fries</div>
+                    <div class="item">Corn</div>
+                    <div class="item">Potato Chips</div>
+                    <div class="item">Bread Crumbs</div>
+                    <div class="item">Egg Wash</div>
+                    <div class="item">Metal Sheet Plate</div>
+                    <div class="item">Ice Cream Maker</div>
+                    <div class="item">Chocolate Bars</div>
+                    <div class="item">Bacon</div>
+                    <div class="item">Deep Fryer</div>
+                    <div class="item">Fried Chicken</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--    Footer section -->
+    <div class="ui inverted vertical segment">
+        <div class="ui centered page grid">
+            <div class="four wide column">
+                <h3 class="ui inverted header">Thanks for visiting!</h3>
+                <p>If you have any pointers on any of my work or would like for me to do some work for you please use my twitter link to the left.</p>
+            </div>
+            <div class="four wide column">
+                <h3 class="ui inverted header">Contact Me:</h3>
+                <a href="http://twitter.com/kaminocoding">
+                    <div class="ui inverted blue button">
+                        <i class="twitter icon"></i> Twitter
+                    </div>
+                </a>
+                <p></p>
+                <a href="https://github.com/cyb3rwarri0r8">
+                    <div class="ui inverted button">
+                        <i class="github icon"></i> Github
+                    </div>
+                </a>
+            </div>
+            <div class="five wide column">
+                <h3 class="ui inverted header">Mod update requests?</h3>
+                <p>If you want to see a mod updated send me a link to the mod using either of the below options:</p>
+                <div class="ui buttons">
+                    <a href="http://twitter.com/kaminocoding">
+                        <div class="ui blue button">
+                            Twitter
+                        </div>
+                    </a>
+                    <div class="or"></div>
+                    <a href="http://www.minecraftforum.net/private-messages/send?recipient=Cyb3rWarri0r8">
+                        <div class="ui positive button">
+                            MinecraftForum
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript">
+        $(document)
+            .ready(function () {
+                $('.ui.dropdown')
+                    .dropdown();
+                $('.ui.menu .dropdown')
+                    .dropdown({
+                        on: 'hover'
+                    });
+
+            });
+
+        function licenseModal() {
+            $('.modal')
+                .modal('show');
+        }
+    </script>
+
+</body>
+
+</html>
