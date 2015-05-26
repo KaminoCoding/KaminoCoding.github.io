@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- Standard Meta -->
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+    <!-- Site Properities -->
+    <title>KaminoCoding - CCMC</title>
+
+    <link rel="stylesheet" type="text/css" href="assets/semantic.css">
+    <link rel="stylesheet" href="assets/style.css">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.js"></script>
+    <script src="assets/semantic.js"></script>
+</head>
+
+<body>
+    <!--   Begin menu bar -->
+    <div class="ui masthead segment">
+        <div class="ui centered page grid">
+            <div class="sixteen wide column">
+                <div class="ui inverted blue menu">
+
+                    <a class="header item" href="http://cyb3rwarri0r8.github.io">
+                        KaminoCoding
+                    </a>
+                    <a href="about.html" class="item">About Me</a>
+                    <div class="ui pointing dropdown link item" tabindex="-1">
+                        <i class="dropdown icon" tabindex="0"></i>
+                        <span class="text">Modding Projects</span>
+                        <div class="menu" tabindex="-1">
+                            <a class="item" href="http://cyb3rwarri0r8.github.io/CommuMod">CommuMod</a>
+                            <a href="http://cyb3rwarri0r8.github.io/Better-Foods/" class="item">Better Foods</a>
+                            <a href="http://cyb3rwarri0r8.github.io/Invincible-Hamster" class="item">Invincible Hamster</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="ui hidden divider"></div>
+    <!--    Begin page specific layout -->
+
+    <div class="ui vertical segment">
+        <div class="ui centered page grid">
+            <div class="fourteen wide column">
+                <h1>ComputerCraft Missile Control</h1>
+                <p>All work on this project has ceased. Anyone willing to contribute is welcome to. All the source code is available <a href="https://github.com/Cyb3rwarri0r8/ComputerCraft-Missile-Control-CCMC-">here.</a> All work is licensed under MIT so you can continue the work.</p>
+            </div>
+        </div>
+    </div>
+
+    <!--    Begin Footer-->
+    <div class="ui sticky inverted footer vertical segment">
+        <div class="ui centered page grid">
+            <div class="four wide column">
+                <h3>Thanks for visiting!</h3>
+                <p>If you have any pointers on any of my work or would like for me to do some work for you please use my twitter link to the left.</p>
+            </div>
+            <div class="four wide column">
+                <h3>Contact Me:</h3>
+                <a href="http://twitter.com/kaminocoding">
+                    <div class="ui inverted blue button">
+                        <i class="twitter icon"></i> Twitter
+                    </div>
+                </a>
+                <p></p>
+                <a href="https://github.com/cyb3rwarri0r8">
+                    <div class="ui inverted button">
+                        <i class="github icon"></i> Github
+                    </div>
+                </a>
+            </div>
+            <div class="five wide column">
+                <h3>Mod update requests?</h3>
+                <p>If you want to see a mod updated send me a link to the mod using either of the below options:</p>
+                <div class="ui buttons">
+                    <a href="http://twitter.com/kaminocoding">
+                        <div class="ui blue button">
+                            Twitter
+                        </div>
+                    </a>
+                    <div class="or"></div>
+                    <a href="http://www.minecraftforum.net/private-messages/send?recipient=Cyb3rWarri0r8">
+                        <div class="ui positive button">
+                            MinecraftForum
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--    Begin scripts -->
+    <script type="text/javascript">
+        $(document)
+            .ready(function () {
+                $('.ui.dropdown')
+                    .dropdown();
+                $('.ui.inverted.blue.menu .dropdown')
+                    .dropdown({
+                        on: 'hover'
+                    });
+            });
+    </script>
+</body>
+
+</html>
