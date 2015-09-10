@@ -25,6 +25,19 @@
         }
 */
 	</style>
+	<script>
+		$(document).ready(function () {
+			$("button").click(function () {
+
+
+				$.getJSON("http://widget.mcf.li/mc-mods/minecraft/220860-commumod.json", function (result) {
+					$.each(result, function (i, field) {
+						$("div").append(field + " ");
+					});
+				});
+			});
+		});
+	</script>
 </head>
 
 <body id="home">
@@ -137,30 +150,11 @@
 				<a href="https://github.com/cyb3rwarri0r8/commumod/issues">
 					<div class="ui blue button">Report a Bug</div>
 				</a>
+				<button>Get JSON</button>
+				<div></div>
 
 			</div>
-			<!--<div class="ui issue modal">
-                <i class="close icon"></i>
-                <div class="header">Report an Issue</div>
-                <div class="content">
-                    <div class="ui header">Input Issue info</div>
-                    <form action="https://api.github.com/repos/cyb3rwarri0r8/commumod/issues" class="ui form" method="post" id="issueForm">
-                        <div class="field">
-                            <label for="title">Title:</label>
-                            <input type="text" name="title" placeholder="Title">
-                        </div>
-                        <div class="field">
-                            <textarea type="text" name="body" placeholder="Enter issue information..."></textarea>
-                        </div>
-                    </form>
-                </div>
-                <div class="actions">
-                    <div class="ui positive right labeled icon button" onclick="submitIssue()">
-                        Submit Issue
-                        <i class="checkmark icon"></i>
-                    </div>
-                </div>
-            </div>-->
+
 			<div class="seven wide column">
 				<h2 class="ui inverted header">Changelog:</h2>
 				<div class="ui inverted list">
@@ -253,7 +247,6 @@
 			</div>
 		</div>
 	</div>
-	<script src="node_modules/octonode/lib/octonode.js"></script>
 	<script type="text/javascript">
 		$(document)
 			.ready(function () {
