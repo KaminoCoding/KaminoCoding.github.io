@@ -25,19 +25,7 @@
         }
 */
 	</style>
-	<script>
-		$(document).ready(function () {
-			$("button").click(function () {
 
-
-				$.getJSON("http://widget.mcf.li/mc-mods/minecraft/220860-commumod.json", function (result) {
-					$.each(result, function (i, field) {
-						$("div").append(field + " ");
-					});
-				});
-			});
-		});
-	</script>
 </head>
 
 <body id="home">
@@ -150,8 +138,7 @@
 				<a href="https://github.com/cyb3rwarri0r8/commumod/issues">
 					<div class="ui blue button">Report a Bug</div>
 				</a>
-				<button>Get JSON</button>
-				<div></div>
+
 
 			</div>
 
