@@ -24,8 +24,37 @@
             padding-top: 3.5em;
         }
 */
-	</style>
 
+		body {
+			font-family: 'Open Sans', sans-serif;
+		}
+
+		h1,
+		h2,
+		h3,
+		h4,
+		h5,
+		h6 {
+			font-family: 'Dosis', sans-serif;
+		}
+	</style>
+	<script>
+		$(document).ready(function () {
+			//			$("button").click(function () {
+			jQuery.getJSON("http://widget.mcf.li/mc-mods/minecraft/220860-commumod.json", function (data) {
+				var versions = [];
+				$.each(data.versions["1.7.2"], function (key1, val1) {
+					versions.push("<a href='" + data.versions["1.7.2"][key1].url + "'class='item'>" + data.versions["1.7.2"][key1].name + "&nbsp;&nbsp;" + "<div class='ui red label'>" + data.versions["1.7.2"][key1].type + "</div></a>");
+					console.log(versions.forEach);
+				});
+				$("<div/>", {
+					"class": "ui menu",
+					html: versions
+				}).appendTo("#oldDownloads");
+			});
+		});
+		//		});
+	</script>
 </head>
 
 <body id="home">
@@ -116,13 +145,13 @@
 				<a href="http://bit.ly/commumod-releases">
 					<div class="ui red button">Potentially unstable beta releases</div>
 				</a>
-				<div class="ui floating dropdown labeled button">
+				<div class="ui floating dropdown labeled button" id="oldDownloads">
 					<span class="text">Old Downloads</span>
-					<div class="menu">
+
+					<!--
 						<a href="http://curse.com/mc-mods/minecraft/220860-commumod/2203985" class="item">Version 1.1.0 for MC 1.7.2</a>
 						<a href="http://bit.ly/jamoa-mc-172" class="item">Version 1.0.0 for MC 1.7.2</a>
-
-					</div>
+-->
 				</div>
 			</div>
 		</div>
@@ -138,8 +167,6 @@
 				<a href="https://github.com/cyb3rwarri0r8/commumod/issues">
 					<div class="ui blue button">Report a Bug</div>
 				</a>
-
-
 			</div>
 
 			<div class="seven wide column">
