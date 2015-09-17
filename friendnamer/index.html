@@ -41,12 +41,35 @@
 	</style>
 	<script>
 		$(document).ready(function () {
+
+
+		});
+
+		$(document).ready(function () {
+			var bindElements = function () {
+				$('.ui.menu .dropdown')
+					.dropdown();
+				$('.dropdown')
+					.dropdown({
+						on: 'hover',
+						allowCategorySelection: true,
+						transition: 'drop'
+					});
+				$('.ui.popup .item')
+					.popup();
+				$('#downloads .item')
+					.popup({
+						on: 'hover',
+						transition: 'drop',
+						title: 'Minecraft Version'
+					});
+			};
 			//			$("button").click(function () {
 			//			MC 1.8 Versions -------------------------
 			jQuery.getJSON("http://widget.mcf.li/mc-mods/minecraft/233303-friend-namer.json", function (data) {
 				var versions1 = [];
 				$.each(data.versions["1.8"], function (key, val) {
-					versions1.push("<div class='item' data-content='For Minecraft 1.8'><a href='" + data.versions["1.8"][key].url + "' class='link'><i class='fa fa-download'></i>&nbsp;&nbsp;" + data.versions["1.8"][key].name + "&nbsp;&nbsp;</a>" + "<div class='ui green right floated label'>" + data.versions["1.8"][key].type + "</div>" + "</div>");
+					versions1.push("<div class='item' title='Minecraft Version' data-content='1.8'><a href='" + data.versions["1.8"][key].url + "' class='link'><i class='fa fa-download'></i>&nbsp;&nbsp;" + data.versions["1.8"][key].name + "&nbsp;&nbsp;</a>" + "<div class='ui green right floated label'>" + data.versions["1.8"][key].type + "</div>" + "</div>");
 
 				});
 				$("<div/>", {
@@ -54,13 +77,8 @@
 					"class": "ui selection list",
 					html: versions1
 				}).appendTo("#downloads");
-				$("<div/>", {
-					class: "ui popup",
-					title: 'Minecraft Version',
-					"data-content": '1.8.x'
-				}).appendTo("#one-eight");
-				$("<hr>").insertAfter("#one-eight");
 
+				bindElements();
 			});
 
 
@@ -69,18 +87,20 @@
 			jQuery.getJSON("http://widget.mcf.li/mc-mods/minecraft/233303-friend-namer.json", function (data) {
 				var versions = [];
 				$.each(data.versions["1.7.10"], function (key1, val1) {
-					versions.push("<div class='item' data-content='For Minecraft 1.7.10'><a href='" + data.versions["1.7.10"][key1].url + "'class='link'><i class='fa fa-download'></i>&nbsp;&nbsp;" + data.versions["1.7.10"][key1].name + "&nbsp;&nbsp;</a>" + "<div class='ui red right floated label'>" + data.versions["1.7.10"][key1].type + "</div></div>");
+					versions.push("<div class='item' data-content='1.7.10'><a href='" + data.versions["1.7.10"][key1].url + "'class='link'><i class='fa fa-download'></i>&nbsp;&nbsp;" + data.versions["1.7.10"][key1].name + "&nbsp;&nbsp;</a>" + "<div class='ui red right floated label'>" + data.versions["1.7.10"][key1].type + "</div></div>");
 
 				});
 
-				$("<div/>", {
-					"class": "ui selection list",
-					html: versions
-				}).appendTo("#downloads");
+				$.each(versions, function (i) {
+					$("#one-eight").append(versions[i]); //, {
+					//								"class": "",
+					//								"data-content": '1.7.10',
+					//								html: versions
+					//							}).append("#one-eight");
+				});
+
+				bindElements();
 			});
-
-
-
 		});
 
 		//		});
@@ -99,12 +119,14 @@
                     </a>
 					<a href="about.html" class="item">About Me</a>
 					<div class="ui floating dropdown link item" tabindex="-1">
-						<i class="dropdown icon" tabindex="0"></i>
+
 						<span class="text">Modding Projects</span>
+						<i class="right floated dropdown icon"></i>
 						<div class="menu" tabindex="-1">
-							<a class="item" href="/commumod/">CommuMod</a>
-							<a href="better-food/" class="item">Better Foods</a>
-							<a href="invincible-hamster/" class="item">Invincible Hamster</a>
+							<a class="item" href="../commumod/">CommuMod</a>
+							<a href="../better-food/" class="item">Better Foods</a>
+							<a href="../invincible-hamster/" class="item">Invincible Hamster</a>
+							<a href="../friendnamer/" class="active item">Friend Namer</a>
 						</div>
 					</div>
 				</div>
@@ -123,9 +145,6 @@
 				<div id="downloads"></div>
 			</div>
 		</div>
-	</div>
-	<div class="ui custom popup top left transition hidden">
-		I'm not on the same level as the button, but i can still be found.
 	</div>
 	<div class="ui inverted footer vertical segment">
 		<div class="ui centered page grid">
@@ -166,26 +185,6 @@
 			</div>
 		</div>
 	</div>
-	<script type="text/javascript">
-		$(document)
-			.ready(function () {
-				$('.ui.menu .dropdown')
-					.dropdown();
-				$('.dropdown')
-					.dropdown({
-						on: 'hover',
-						allowCategorySelection: true,
-						transition: 'drop'
-					});
-				$('.ui.popup .item')
-					.popup();
-				$('.big')
-					.popup({
-						on: 'hover',
-						target: '#one-eight > .item > .fa.fa-download',
-					});
-			});
-	</script>
 </body>
 
 </html>

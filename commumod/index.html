@@ -41,18 +41,53 @@
 	<script>
 		$(document)
 			.ready(function () {
+				var bindElements = function () {
+					$('.ui.menu .dropdown')
+						.dropdown();
+					$('.dropdown')
+						.dropdown({
+							on: 'hover',
+							allowCategorySelection: true,
+							transition: 'drop'
+						});
+					$('.ui.popup .item')
+						.popup();
+					$('#downloads .item')
+						.popup({
+							on: 'hover',
+							transition: 'drop',
+							title: 'Minecraft Version'
+						});
+					/*$('.ui.dropdown.button') .dropdown({ on: 'hover', transition: 'fly up' });*/
+				};
+
+
 				//			$("button").click(function () {
 				jQuery.getJSON("http://widget.mcf.li/mc-mods/minecraft/220860-commumod.json", function (data) {
-					var versions = [];
-					$.each(data.versions["1.7.2"], function (key1, val1) {
-						versions.push("<div class='item' tabindex='0'><a href='" + data.versions["1.7.2"][key1].url + "'>" + data.versions["1.7.2"][key1].name + "&nbsp;</a><div class='ui red label'>" + data.versions["1.7.2"][key1].type + "</div></div>");
+					var versions1 = [];
+					$.each(data.versions["1.7.10"], function (key, val) {
+						if (data.versions["1.7.10"][key].type == "beta" | data.versions["1.7.10"][key].type == "alpha") {
+							versions1.push("<div class='item' data-content='1.7.10'><a href='" + data.versions["1.7.10"][key].url + "' class='link'>" + data.versions["1.7.10"][key].name + "&nbsp;</a><div class='ui right floated red label'>" + data.versions["1.7.10"][key].type + "</div></div>");
+						} else {
+							versions1.push("<div class='item' data-content='1.7.10'><a href='" + data.versions["1.7.10"][key].url + "' class='link'>" + data.versions["1.7.10"][key].name + "&nbsp;</a><div class='ui right floated blue label'>" + data.versions["1.7.10"][key].type + "</div></div>");
+						}
 
 					});
-					$("<div/>", {
-						tabIndex: 0,
-						html: versions
-					}).appendTo("#downloads .menu");
+					var versions = [];
+					$.each(data.versions["1.7.2"], function (key, val) {
+						if (data.versions["1.7.2"][key].type == "beta" | data.versions["1.7.2"][key].type == "alpha") {
+							versions1.push("<div class='item' data-content='1.7.2'><a href='" + data.versions["1.7.2"][key].url + "' class='link'>" + data.versions["1.7.2"][key].name + "&nbsp;</a><div class='ui right floated red label'>" + data.versions["1.7.2"][key].type + "</div></div>");
+						} else {
+							versions1.push("<div class='item' data-content='1.7.2'><a href='" + data.versions["1.7.2"][key].url + "' class='link'>" + data.versions["1.7.2"][key].name + "&nbsp;</a><div class='ui right floated blue label'>" + data.versions["1.7.2"][key].type + "</div></div>");
+						}
+					});
 
+
+					$("<div/>", {
+						class: "ui selection list",
+						html: $.merge(versions1, versions)
+					}).appendTo("#downloads");
+					bindElements();
 				});
 
 			});
@@ -134,13 +169,22 @@
 			<div class="fourteen wide column">
 				<h2 class="ui header">Downloads: <img src="https://circleci.com/gh/KaminoCoding/CommuMod.svg?style=svg"></h2>
 				<br>
+				<!--
 				<iframe src="http://widget.mcf.li/mc-mods/minecraft/220860-commumod?version=beta" width="100%" style="border:none"></iframe>
 				<br>
 				<iframe src="http://widget.mcf.li/mc-mods/minecraft/220860-commumod?version=1.7.10" width="100%" style="border:none"></iframe>
+-->
+				<!--
 				<br>
 				<a href="https://mods.io/mods/1090-jamoa" target="_self" class="link">Mirror</a>
 				<div class="ui hidden divider"></div>
+-->
 				<!--				<iframe src="http://widget.mcf.li/mc-mods/minecraft/220860-commumod?version=1.7.2" width="100%" style="border:none"></iframe>-->
+
+				<div id="downloads">
+
+				</div>
+
 				<a href="https://github.com/cyb3rwarri0r8/CommuMod">
 					<div class="ui orange button">Source Code
 					</div>
@@ -148,9 +192,11 @@
 				<a href="http://bit.ly/commumod-releases">
 					<div class="ui red button">Potentially unstable beta releases</div>
 				</a>
-				<div class="ui dropdown button" id="downloads">
+				<!--
+				<div class="ui dropdown button" id="oldDownloads">
 					<div class="text">Old Downloads</div>
 				</div>
+-->
 			</div>
 		</div>
 	</div>
@@ -260,24 +306,6 @@
 			</div>
 		</div>
 	</div>
-	<script type="text/javascript">
-		$(document)
-			.ready(function () {
-				$('.ui.dropdown')
-					.dropdown();
-				$('.ui.menu .dropdown')
-					.dropdown({
-						on: 'hover',
-						transition: 'drop'
-					});
-				$('.ui.dropdown.button')
-					.dropdown({
-						on: 'hover',
-						transition: 'drop'
-					});
-			});
-	</script>
-
 </body>
 
 </html>
