@@ -30,3 +30,7 @@ a.link:hover:before {
 	-webkit-transform: scaleX(1);
 	transform: scaleX(1);
 }
+
+.sticky {
+	bottom: 0;
+}

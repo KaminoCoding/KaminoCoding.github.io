@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<!-- Standard Meta -->
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+	<meta name="p:domain_verify" content="7f99be65c016ff457e80c782f8d4bba9" />
+	<!-- Site Properities -->
+	<title>KaminoCoding - Homepage</title>
+
+	<link rel="stylesheet" href="../semantic/dist/semantic.css">
+	<link rel="stylesheet" href="../assets/style.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.js"></script>
+	<script src="../semantic/dist/semantic.js"></script>
+	<style type="text/css">
+		/*
+        #home{
+            padding-left: 5em;
+            padding-right: 5em;
+            padding-bottom: 3.5em;
+            padding-top: 3.5em;
+        }
+*/
+		
+		body {
+			font-family: 'Open Sans', sans-serif;
+		}
+		
+		h1,
+		h2,
+		h3,
+		h4,
+		h5,
+		h6 {
+			font-family: 'Dosis', sans-serif;
+		}
+	</style>
+	<script>
+		$(document).ready(function () {
+			//			$("button").click(function () {
+			//			MC 1.8 Versions -------------------------
+			jQuery.getJSON("http://widget.mcf.li/mc-mods/minecraft/233303-friend-namer.json", function (data) {
+				var versions1 = [];
+				$.each(data.versions["1.8"], function (key, val) {
+					versions1.push("<div class='item' data-content='For Minecraft 1.8'><a href='" + data.versions["1.8"][key].url + "' class='link'><i class='fa fa-download'></i>&nbsp;&nbsp;" + data.versions["1.8"][key].name + "&nbsp;&nbsp;</a>" + "<div class='ui green right floated label'>" + data.versions["1.8"][key].type + "</div>" + "</div>");
+
+				});
+				$("<div/>", {
+					"id": "one-eight",
+					"class": "ui selection list",
+					html: versions1
+				}).appendTo("#downloads");
+				$("<div/>", {
+					class: "ui popup",
+					title: 'Minecraft Version',
+					"data-content": '1.8.x'
+				}).appendTo("#one-eight");
+				$("<hr>").insertAfter("#one-eight");
+
+			});
+
+
+
+			//			MC 1.7.10 Versions -----------------------
+			jQuery.getJSON("http://widget.mcf.li/mc-mods/minecraft/233303-friend-namer.json", function (data) {
+				var versions = [];
+				$.each(data.versions["1.7.10"], function (key1, val1) {
+					versions.push("<div class='item' data-content='For Minecraft 1.7.10'><a href='" + data.versions["1.7.10"][key1].url + "'class='link'><i class='fa fa-download'></i>&nbsp;&nbsp;" + data.versions["1.7.10"][key1].name + "&nbsp;&nbsp;</a>" + "<div class='ui red right floated label'>" + data.versions["1.7.10"][key1].type + "</div></div>");
+
+				});
+
+				$("<div/>", {
+					"class": "ui selection list",
+					html: versions
+				}).appendTo("#downloads");
+			});
+
+
+
+		});
+
+		//		});
+	</script>
+</head>
+
+<body id="home">
+
+	<div class="ui masthead segment">
+		<div class="ui centered page grid">
+			<div class="sixteen wide column">
+				<div class="ui inverted red menu">
+
+					<a class="header item" href="http://kaminocoding.github.io">
+                        KaminoCoding
+                    </a>
+					<a href="about.html" class="item">About Me</a>
+					<div class="ui floating dropdown link item" tabindex="-1">
+						<i class="dropdown icon" tabindex="0"></i>
+						<span class="text">Modding Projects</span>
+						<div class="menu" tabindex="-1">
+							<a class="item" href="/commumod/">CommuMod</a>
+							<a href="better-food/" class="item">Better Foods</a>
+							<a href="invincible-hamster/" class="item">Invincible Hamster</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="ui vertical segment">
+		<div class="ui centered page grid">
+			<div class="eighteen wide column">
+				<h2 class="ui big centered header">Friend Namer</h2>
+				<p>This is a small mod I wrote up in a couple hours. It allows you to add custom nicknames to your friends. I will release a tutorial video eventually but until then there are text instructions. This is a clientside only mod so it won't effect anything on a server and should be compatible with all and every server wherever they are played.</p>
+				<hr>
+				<p> You can access the options by clicking the Mods button on the main menu the clicking on the name of the mod and clicking the Config button underneath that. The mod is in beta so please give it a try and tell me whats going wrong or what you want to see it have.</p>
+				<h3 class="ui large centered header">Downloads:</h3>
+				<div id="downloads"></div>
+			</div>
+		</div>
+	</div>
+	<div class="ui custom popup top left transition hidden">
+		I'm not on the same level as the button, but i can still be found.
+	</div>
+	<div class="ui inverted footer vertical segment">
+		<div class="ui centered page grid">
+			<div class="four wide column">
+				<h3>Thanks for visiting!</h3>
+				<p>If you have any pointers on any of my work or would like for me to do some work for you please use my twitter link to the left.</p>
+			</div>
+			<div class="four wide column">
+				<h3>Contact Me:</h3>
+				<a href="http://twitter.com/kaminocoding">
+					<div class="ui inverted blue button">
+						<i class="twitter icon"></i> Twitter
+					</div>
+				</a>
+				<p></p>
+				<a href="https://github.com/cyb3rwarri0r8">
+					<div class="ui inverted button">
+						<i class="github icon"></i> Github
+					</div>
+				</a>
+			</div>
+			<div class="five wide column">
+				<h3>Mod update requests?</h3>
+				<p>If you want to see a mod updated send me a link to the mod using either of the below options:</p>
+				<div class="ui buttons">
+					<a href="http://twitter.com/kaminocoding">
+						<div class="ui blue button">
+							Twitter
+						</div>
+					</a>
+					<div class="or"></div>
+					<a href="http://www.minecraftforum.net/private-messages/send?recipient=Cyb3rWarri0r8">
+						<div class="ui positive button">
+							MinecraftForum
+						</div>
+					</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript">
+		$(document)
+			.ready(function () {
+				$('.ui.menu .dropdown')
+					.dropdown();
+				$('.dropdown')
+					.dropdown({
+						on: 'hover',
+						allowCategorySelection: true,
+						transition: 'drop'
+					});
+				$('.ui.popup .item')
+					.popup();
+				$('.big')
+					.popup({
+						on: 'hover',
+						target: '#one-eight > .item > .fa.fa-download',
+					});
+			});
+	</script>
+</body>
+
+</html>

@@ -10,11 +10,11 @@
 	<!-- Site Properities -->
 	<title>KaminoCoding - Invincible Hamster Mod</title>
 
-	<link rel="stylesheet" type="text/css" href="../assets/semantic.css">
+	<link rel="stylesheet" type="text/css" href="../semantic/dist/semantic.css">
 	<link rel="stylesheet" href="../assets/style.css">
 
-	<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.js"></script>
-	<script src="../assets/semantic.js"></script>
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.js"></script>
+	<script src="../semantic/dist/semantic.js"></script>
 	<style type="text/css">
 		/*
         #home{
@@ -24,11 +24,11 @@
             padding-top: 3.5em;
         }
 */
-
+		
 		body {
 			font-family: 'Open Sans', sans-serif;
 		}
-
+		
 		h1,
 		h2,
 		h3,
@@ -39,20 +39,23 @@
 		}
 	</style>
 	<script>
-		$(document).ready(function () {
-			//			$("button").click(function () {
-			jQuery.getJSON("http://widget.mcf.li/mc-mods/minecraft/220860-commumod.json", function (data) {
-				var versions = [];
-				$.each(data.versions["1.7.2"], function (key1, val1) {
-					versions.push("<a href='" + data.versions["1.7.2"][key1].url + "'class='item'>" + data.versions["1.7.2"][key1].name + "&nbsp;&nbsp;" + "<div class='ui red label'>" + data.versions["1.7.2"][key1].type + "</div></a>");
-					console.log(versions.forEach);
+		$(document)
+			.ready(function () {
+				//			$("button").click(function () {
+				jQuery.getJSON("http://widget.mcf.li/mc-mods/minecraft/220860-commumod.json", function (data) {
+					var versions = [];
+					$.each(data.versions["1.7.2"], function (key1, val1) {
+						versions.push("<div class='item' tabindex='0'><a href='" + data.versions["1.7.2"][key1].url + "'>" + data.versions["1.7.2"][key1].name + "&nbsp;</a><div class='ui red label'>" + data.versions["1.7.2"][key1].type + "</div></div>");
+
+					});
+					$("<div/>", {
+						tabIndex: 0,
+						html: versions
+					}).appendTo("#downloads .menu");
+
 				});
-				$("<div/>", {
-					"class": "ui menu",
-					html: versions
-				}).appendTo("#oldDownloads");
+
 			});
-		});
 		//		});
 	</script>
 </head>
@@ -68,10 +71,10 @@
                         KaminoCoding
                     </a>
 					<a href="about.html" class="item">About Me</a>
-					<div class="ui pointing dropdown link item" tabindex="-1">
-						<i class="dropdown icon" tabindex="0"></i>
-						<span class="text">Modding Projects</span>
-						<div class="menu" tabindex="-1">
+					<div class="ui floating dropdown link item">
+						<span class="text">Modding Projects&nbsp;</span>
+						<i class="dropdown icon"></i>
+						<div class="menu">
 							<a class="item" href="http://cyb3rwarri0r8.github.io/CommuMod">CommuMod</a>
 							<a href="http://cyb3rwarri0r8.github.io/Better-Foods/" class="item">Better Foods</a>
 							<a href="http://cyb3rwarri0r8.github.io/Invincible-Hamster" class="item">Invincible Hamster</a>
@@ -145,17 +148,13 @@
 				<a href="http://bit.ly/commumod-releases">
 					<div class="ui red button">Potentially unstable beta releases</div>
 				</a>
-				<div class="ui floating dropdown labeled button" id="oldDownloads">
-					<span class="text">Old Downloads</span>
-
-					<!--
-						<a href="http://curse.com/mc-mods/minecraft/220860-commumod/2203985" class="item">Version 1.1.0 for MC 1.7.2</a>
-						<a href="http://bit.ly/jamoa-mc-172" class="item">Version 1.0.0 for MC 1.7.2</a>
--->
+				<div class="ui dropdown button" id="downloads">
+					<div class="text">Old Downloads</div>
 				</div>
 			</div>
 		</div>
 	</div>
+
 
 	<div class="ui inverted vertical segment">
 		<div class="ui centered page grid">
@@ -268,9 +267,14 @@
 					.dropdown();
 				$('.ui.menu .dropdown')
 					.dropdown({
-						on: 'hover'
+						on: 'hover',
+						transition: 'drop'
 					});
-
+				$('.ui.dropdown.button')
+					.dropdown({
+						on: 'hover',
+						transition: 'drop'
+					});
 			});
 	</script>
 
