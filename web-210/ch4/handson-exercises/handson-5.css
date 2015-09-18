@@ -1,0 +1,14 @@
+a {
+	text-decoration: none;
+}
+
+body {
+	background-color: #fff;
+	color: #000;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+.new {
+	font-weight: bold;
+	font-style: italic;
+}

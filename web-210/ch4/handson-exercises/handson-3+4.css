@@ -1,0 +1,10 @@
+.new {
+	font-style: italic;
+	font-weight: bold;
+}
+
+body {
+	color: brown;
+	font-size: 1.2em;
+	font-family: Arial, Veranda, sans-serif;
+}
