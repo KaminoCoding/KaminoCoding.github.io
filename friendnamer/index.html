@@ -38,6 +38,15 @@
 		h6 {
 			font-family: 'Dosis', sans-serif;
 		}
+
+		@media (min-height: 320px) {
+			.footer {
+				position: absolute !important;
+				/* !important for SO snippet priority */
+				bottom: 0;
+				width: 100%;
+			}
+		}
 	</style>
 	<script>
 		$(document).ready(function () {
@@ -63,6 +72,10 @@
 						transition: 'drop',
 						title: 'Minecraft Version'
 					});
+				$('.sticky')
+					.sticky({
+
+					})
 			};
 			//			$("button").click(function () {
 			//			MC 1.8 Versions -------------------------
@@ -134,7 +147,7 @@
 		</div>
 	</div>
 
-	<div class="ui vertical segment">
+	<div class="ui stacked vertical segment">
 		<div class="ui centered page grid">
 			<div class="eighteen wide column">
 				<h2 class="ui big centered header">Friend Namer</h2>
@@ -146,7 +159,7 @@
 			</div>
 		</div>
 	</div>
-	<div class="ui inverted footer vertical segment">
+	<div class="ui inverted vertical footer segment">
 		<div class="ui centered page grid">
 			<div class="four wide column">
 				<h3>Thanks for visiting!</h3>
