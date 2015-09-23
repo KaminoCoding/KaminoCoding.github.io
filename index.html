@@ -38,231 +38,249 @@
 			font-family: 'Dosis', sans-serif;
 		}
 	</style>
+	<script type="text/javascript">
+		// NOTE This is how to use the sidebar
+		/*$(document)
+			.ready(function () {
+				$('.ui.sidebar')
+					.sidebar('toggle');
+				$('.ui.sidebar')
+					.sidebar('attach', '#toggle');
+			})*/
+	</script>
 </head>
 
 <body id="home">
+	<div class="ui sidebar left inverted vertical menu" id="mobile"> // TODO
+		<a href="index.html" class="item">Home</a>
+		<a href="about.html" class="item">About KaminoCoding</a>
+	</div>
 
-	<div class="ui masthead segment">
-		<div class="ui centered page grid">
-			<div class="sixteen wide column">
-				<div class="ui inverted red menu">
+	<div class="pusher">
+		<div class="ui masthead segment">
+			<div class="ui centered page grid">
+				<div class="sixteen wide column">
 
-					<a class="header item" href="http://kaminocoding.github.io">
+					<div class="ui inverted red menu">
+
+						<a class="header item" href="http://kaminocoding.github.io">
                         KaminoCoding
                     </a>
-					<a href="about.html" class="item">About Me</a>
-					<a href="ccmc.html" class="item">CCMC</a>
-					<div class="ui dropdown link item" tabindex="-1">
+						<a href="about.html" class="item">About Me</a>
+						<a href="ccmc.html" class="item">CCMC</a>
+						<a href="" class="item" id="toggle">Toggle Sidebar</a>
+						<div class="ui dropdown link item" tabindex="-1">
 
-						<span class="text">Modding Projects&nbsp;</span>
-						<i class="dropdown icon" tabindex="0"></i>
-						<div class="menu" tabindex="-1">
-							<a class="item" href="/commumod/">CommuMod</a>
-							<a href="better-food/" class="item">Better Foods</a>
-							<a href="invincible-hamster/" class="item">Invincible Hamster</a>
-							<a href="friendnamer/" class="item">Friend Namer</a>
-						</div>
-					</div>
-					<div class="ui dropdown link item">
-						<span class="text">WEB-210</span>
-						<i class="dropdown icon"></i>
-						<div class="menu">
-							<div class="item">
-								<i class="dropdown icon"></i>
-								<span class="text">Chapter 2</span>
-								<div class="menu">
-									<a href="web-210/ch2/handson2-1.html" class="item">Hands On 1</a>
-									<a href="web-210/ch2/handson2-2.html" class="item">Hands On 2</a>
-									<a href="web-210/ch2/handson2-3.html" class="item">Hands On 3</a>
-									<a href="web-210/ch2/handson2-4.html" class="item">Hands On 4</a>
-									<a href="web-210/ch2/handson2-5.html" class="item">Hands On 5</a>
-									<a href="web-210/ch2/handson2-6.html" class="item">Hands On 6</a>
-									<a href="web-210/ch2/handson2-7.html" class="item">Hands On 7</a>
-									<a href="web-210/ch2/handson2-8.html" class="item">Hands On 8</a>
-									<a href="web-210/ch2/handson2-9.html" class="item">Hands On 9</a>
-									<a href="web-210/ch2/handson2-10.html" class="item">Hands On 10</a>
-									<a href="web-210/ch2/handson2-11.html" class="item">Hands On 11</a>
-									<a href="web-210/ch2/handson2-12.html" class="item">Hands On 12</a>
-									<a href="web-210/ch2/handsonexercise1-8.html" class="item">Hands On Exercises 1-8</a>
-									<a href="web-210/ch2/handsonexercise9.html" class="item">Hands On Exercise 9</a>
-									<a href="web-210/ch2/handsonexercise10.html" class="item">Hands On Exercies 10</a>
-								</div>
+							<span class="text">Modding Projects&nbsp;</span>
+							<i class="dropdown icon" tabindex="0"></i>
+							<div class="menu" tabindex="-1">
+								<a class="item" href="/commumod/">CommuMod</a>
+								<a href="better-food/" class="item">Better Foods</a>
+								<a href="invincible-hamster/" class="item">Invincible Hamster</a>
+								<a href="friendnamer/" class="item">Friend Namer</a>
 							</div>
-							<div class="item">
-								<i class="dropdown icon"></i>
-								<span class="text">Chapter 3</span>
-								<div class="menu">
-									<a href="web-210/ch3/handson3-1.html" class="item">Hands On 1</a>
-									<a href="web-210/ch3/handson3-2.html" class="item">Hands On 2</a>
-									<a href="web-210/ch3/handson3-3.html" class="item">Hands On 3</a>
-									<a href="web-210/ch3/handson3-4.html" class="item">Hands On 4</a>
-									<a href="web-210/ch3/handson3-5.html" class="item">Hands On 5</a>
-									<a href="web-210/ch3/handson3-6.html" class="item">Hands On 6</a>
-									<a href="web-210/ch3/handson3-7.html" class="item">Hands On 7</a>
-									<div class=" item"><i class="dropdown icon"></i><span class="text">Hands On 8</span>
-										<div class="menu">
-											<a href="web-210/ch3/handson3-8/index.html" class="item">Homepage</a>
-											<a href="web-210/ch3/handson3-8/services.html" class="item">Services</a>
-										</div>
+						</div>
+						<div class="ui dropdown link item">
+							<span class="text">WEB-210</span>
+							<i class="dropdown icon"></i>
+							<div class="menu">
+								<div class="item">
+									<i class="dropdown icon"></i>
+									<span class="text">Chapter 2</span>
+									<div class="menu">
+										<a href="web-210/ch2/handson2-1.html" class="item">Hands On 1</a>
+										<a href="web-210/ch2/handson2-2.html" class="item">Hands On 2</a>
+										<a href="web-210/ch2/handson2-3.html" class="item">Hands On 3</a>
+										<a href="web-210/ch2/handson2-4.html" class="item">Hands On 4</a>
+										<a href="web-210/ch2/handson2-5.html" class="item">Hands On 5</a>
+										<a href="web-210/ch2/handson2-6.html" class="item">Hands On 6</a>
+										<a href="web-210/ch2/handson2-7.html" class="item">Hands On 7</a>
+										<a href="web-210/ch2/handson2-8.html" class="item">Hands On 8</a>
+										<a href="web-210/ch2/handson2-9.html" class="item">Hands On 9</a>
+										<a href="web-210/ch2/handson2-10.html" class="item">Hands On 10</a>
+										<a href="web-210/ch2/handson2-11.html" class="item">Hands On 11</a>
+										<a href="web-210/ch2/handson2-12.html" class="item">Hands On 12</a>
+										<a href="web-210/ch2/handsonexercise1-8.html" class="item">Hands On Exercises 1-8</a>
+										<a href="web-210/ch2/handsonexercise9.html" class="item">Hands On Exercise 9</a>
+										<a href="web-210/ch2/handsonexercise10.html" class="item">Hands On Exercies 10</a>
 									</div>
-									<a href="web-210/ch3/handson3-9.html" class="item">Hands On 9</a>
-									<div class="item">
-										<i class="caret left icon"></i>
-										<span class="text">Hands On Exercises</span>
-
-										<div class="left menu">
-											<a href="web-210/ch3/handson-exercises/handson-1.html" class="item">Hands On Exercise 1</a>
-											<a href="web-210/ch3/handson-exercises/handson-2.html" class="item">Hands On Exercise 2</a>
-											<a href="web-210/ch3/handson-exercises/handson-3+4.html" class="item">Hands On Exercise 3 &amp; 4</a>
-											<a href="web-210/ch3/handson-exercises/handson-5.html" class="item">Hands On Exercise 5</a>
-											<a href="web-210/ch3/handson-exercises/handson-6.css" class="item">Hands On Exercise 6</a>
+								</div>
+								<div class="item">
+									<i class="dropdown icon"></i>
+									<span class="text">Chapter 3</span>
+									<div class="menu">
+										<a href="web-210/ch3/handson3-1.html" class="item">Hands On 1</a>
+										<a href="web-210/ch3/handson3-2.html" class="item">Hands On 2</a>
+										<a href="web-210/ch3/handson3-3.html" class="item">Hands On 3</a>
+										<a href="web-210/ch3/handson3-4.html" class="item">Hands On 4</a>
+										<a href="web-210/ch3/handson3-5.html" class="item">Hands On 5</a>
+										<a href="web-210/ch3/handson3-6.html" class="item">Hands On 6</a>
+										<a href="web-210/ch3/handson3-7.html" class="item">Hands On 7</a>
+										<div class=" item"><i class="dropdown icon"></i><span class="text">Hands On 8</span>
+											<div class="menu">
+												<a href="web-210/ch3/handson3-8/index.html" class="item">Homepage</a>
+												<a href="web-210/ch3/handson3-8/services.html" class="item">Services</a>
+											</div>
 										</div>
+										<a href="web-210/ch3/handson3-9.html" class="item">Hands On 9</a>
+										<div class="item">
+											<i class="caret left icon"></i>
+											<span class="text">Hands On Exercises</span>
+
+											<div class="left menu">
+												<a href="web-210/ch3/handson-exercises/handson-1.html" class="item">Hands On Exercise 1</a>
+												<a href="web-210/ch3/handson-exercises/handson-2.html" class="item">Hands On Exercise 2</a>
+												<a href="web-210/ch3/handson-exercises/handson-3+4.html" class="item">Hands On Exercise 3 &amp; 4</a>
+												<a href="web-210/ch3/handson-exercises/handson-5.html" class="item">Hands On Exercise 5</a>
+												<a href="web-210/ch3/handson-exercises/handson-6.css" class="item">Hands On Exercise 6</a>
+											</div>
+										</div>
+										<a href="web-210/ch3/javajamcss/" class="item">Chaper 3 Case Study - JavaJam</a>
 									</div>
-									<a href="web-210/ch3/javajamcss/" class="item">Chaper 3 Case Study - JavaJam</a>
+								</div>
+								<div class="item">
+									<i class="dropdown icon"></i>
+									<span class="text">Chapter 4</span>
+									<div class="menu">
+										<a href="web-210/ch4/hr.html" class="item">Hands On 1</a>
+										<a href="web-210/ch4/border.html" class="item">Hands On 2</a>
+										<a href="web-210/ch4/borderch4/" class="item">Hands On 3</a>
+										<a href="web-210/ch4/mycaption/" class="item">Hands On 4</a>
+										<a href="web-210/ch4/mycaption2/" class="item">Hands On 5</a>
+										<a href="web-210/ch4/trilliumch4/" class="item">Hands On 6</a>
+										<a href="web-210/ch4/shadowch4/" class="item">Hands On 7</a>
+										<a href="web-210/ch4/opacitych4/" class="item">Hands On 8</a>
+										<a href="web-210/ch4/rgba.html" class="item">Hands On 9</a>
+										<a href="web-210/ch4/hsla.html" class="item">Hands On 10</a>
+
+									</div>
 								</div>
 							</div>
-							<div class="item">
-								<i class="dropdown icon"></i>
-								<span class="text">Chapter 4</span>
-								<div class="menu">
-									<a href="web-210/ch4/hr.html" class="item">Hands On 1</a>
-									<a href="web-210/ch4/border.html" class="item">Hands On 2</a>
-									<a href="web-210/ch4/borderch4/" class="item">Hands On 3</a>
-									<a href="web-210/ch4/mycaption/" class="item">Hands On 4</a>
-									<a href="web-210/ch4/mycaption2/" class="item">Hands On 5</a>
-									<a href="web-210/ch4/trilliumch4/" class="item">Hands On 6</a>
-									<a href="web-210/ch4/shadowch4/" class="item">Hands On 7</a>
-									<a href="web-210/ch4/opacitych4/" class="item">Hands On 8</a>
-									<a href="web-210/ch4/rgba.html" class="item">Hands On 9</a>
-									<a href="web-210/ch4/hsla.html" class="item">Hands On 10</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--	<div class="pusher">-->
+		<div class="ui vertical segment">
+			<div class="ui centered page grid">
+				<div class="fourteen wide column">
+					<h1>Welcome!</h1>
+					<p>This is the home of my coding projects. I encourage you to look around and explore what I do. There is some Lua code up there currently for the ComputerCraft Minecraft mod. That code is bugged and I need some help on it. I currently do some website projects for agencies or communities I'm associated with. I will add links to those soon.</p>
 
-								</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="ui vertical segment">
+			<div class="ui centered page grid">
+				<div class="fourteen wide column">
+					<h1>Minecraft Mods</h1>
+				</div>
+				<div class="seven wide column">
+					<h3>CommuMod</h3>
+					<p>This is a mod that I make completely focused around community requests on <a href="http://minecraftforum.net" class="link">minecraftforum.net</a>.</p>
+					<div class="ui vertical animated button">
+						<a href="http://Cyb3rwarri0r8.github.io/CommuMod/">
+							<div class="visible content">
+								More info...
 							</div>
-						</div>
-
+							<div class="hidden content">
+								<i class="github icon"></i> Github Repo
+							</div>
+						</a>
 					</div>
+					<p>Want to make a request for a new feature?</p>
+					<div class="ui vertical animated button">
+						<a href="http://www.minecraftforum.net/forums/mapping-and-modding/minecraft-mods/2091764-1-7-x-1-3-2-commumod-taking-requests">
+							<div class="visible content">
+								New Request?
+							</div>
+							<div class="hidden content">
+								Go here <i class="arrow right icon"></i>
+							</div>
+						</a>
+					</div>
+
+				</div>
+				<div class="seven wide column">
+					<h3>Better Foods Mod</h3>
+					<p>Better Foods is the mod that I will start working on soon. It is going to be a very large and complex food mod that is farily true to real life cooking.</p>
+					<div class="ui animated button">
+						<a href="http://Cyb3rwarri0r8.github.io/Better-Foods/">
+							<div class="visible content">
+								List of food
+							</div>
+							<div class="hidden content">
+								Go here
+							</div>
+						</a>
+					</div>
+				</div>
+				<div class="fourteen wide column">
+					<h3>Invincible Hamster Mod</h3>
+					<p>The invincible hamster mod is a continuation of Ivorious' invincible hamster mod. The link to the forum post with downloads is avaialable <a href="http://www.minecraftforum.net/forums/mapping-and-modding/minecraft-mods/2209997-1-7-10-invincible-hamster-mod" class="link">here.</a>
+					</p>
+					<p>I will have a site with more info on the mod and planned features built soon.</p>
+				</div>
+				<div class="fourteen wide column">
+					<h3>Friend Namer Mod</h3>
+					<p>Friend Namer is a mod that allows you to add custom client side only nicknames to your friends or enemies. A link will be up shortly...</p>
 				</div>
 			</div>
 		</div>
-	</div>
-	<div class="ui vertical segment">
-		<div class="ui centered page grid">
-			<div class="fourteen wide column">
-				<h1>Welcome!</h1>
-				<p>This is the home of my coding projects. I encourage you to look around and explore what I do. There is some Lua code up there currently for the ComputerCraft Minecraft mod. That code is bugged and I need some help on it. I currently do some website projects for agencies or communities I'm associated with. I will add links to those soon.</p>
-
-			</div>
-		</div>
-	</div>
-
-	<div class="ui vertical segment">
-		<div class="ui centered page grid">
-			<div class="fourteen wide column">
-				<h1>Minecraft Mods</h1>
-			</div>
-			<div class="seven wide column">
-				<h3>CommuMod</h3>
-				<p>This is a mod that I make completely focused around community requests on <a href="http://minecraftforum.net" class="link">minecraftforum.net</a>.</p>
-				<div class="ui vertical animated button">
-					<a href="http://Cyb3rwarri0r8.github.io/CommuMod/">
-						<div class="visible content">
-							More info...
-						</div>
-						<div class="hidden content">
-							<i class="github icon"></i> Github Repo
-						</div>
-					</a>
-				</div>
-				<p>Want to make a request for a new feature?</p>
-				<div class="ui vertical animated button">
-					<a href="http://www.minecraftforum.net/forums/mapping-and-modding/minecraft-mods/2091764-1-7-x-1-3-2-commumod-taking-requests">
-						<div class="visible content">
-							New Request?
-						</div>
-						<div class="hidden content">
-							Go here <i class="arrow right icon"></i>
-						</div>
-					</a>
-				</div>
-
-			</div>
-			<div class="seven wide column">
-				<h3>Better Foods Mod</h3>
-				<p>Better Foods is the mod that I will start working on soon. It is going to be a very large and complex food mod that is farily true to real life cooking.</p>
-				<div class="ui animated button">
-					<a href="http://Cyb3rwarri0r8.github.io/Better-Foods/">
-						<div class="visible content">
-							List of food
-						</div>
-						<div class="hidden content">
-							Go here
-						</div>
-					</a>
-				</div>
-			</div>
-			<div class="fourteen wide column">
-				<h3>Invincible Hamster Mod</h3>
-				<p>The invincible hamster mod is a continuation of Ivorious' invincible hamster mod. The link to the forum post with downloads is avaialable <a href="http://www.minecraftforum.net/forums/mapping-and-modding/minecraft-mods/2209997-1-7-10-invincible-hamster-mod" class="link">here.</a>
-				</p>
-				<p>I will have a site with more info on the mod and planned features built soon.</p>
-			</div>
-			<div class="fourteen wide column">
-				<h3>Friend Namer Mod</h3>
-				<p>Friend Namer is a mod that allows you to add custom client side only nicknames to your friends or enemies. A link will be up shortly...</p>
-			</div>
-		</div>
-	</div>
-	<div class="ui vertical segment">
-		<div class="ui centered page grid">
-			<div class="fourteen wide column">
-				<h1>Web Development</h1>
-				<p>I have started learning JavaScript to add to my skillset of HTML5 and CSS3 development. Most of my work is based on Bootstrap templates but I am learning how to use Semantic UI. This site is actually built using it and I kind of prefer it. Styling Semantic is a goal that I plan on learning how to do. If you want to contact me with a job use my twitter link on the bottom of the page.</p>
-				<p>For a list of projects I've either completed or maintain go here:</p>
-				<a href="about.html">
-					<div class="ui positive button">
-						Visit My About Page
-					</div>
-				</a>
-			</div>
-		</div>
-	</div>
-
-
-	<div class="ui inverted footer vertical segment">
-		<div class="ui centered page grid">
-			<div class="four wide column">
-				<h3>Thanks for visiting!</h3>
-				<p>If you have any pointers on any of my work or would like for me to do some work for you please use my twitter link to the left.</p>
-			</div>
-			<div class="four wide column">
-				<h3>Contact Me:</h3>
-				<a href="http://twitter.com/kaminocoding">
-					<div class="ui inverted blue button">
-						<i class="twitter icon"></i> Twitter
-					</div>
-				</a>
-				<p></p>
-				<a href="https://github.com/cyb3rwarri0r8">
-					<div class="ui inverted button">
-						<i class="github icon"></i> Github
-					</div>
-				</a>
-			</div>
-			<div class="five wide column">
-				<h3>Mod update requests?</h3>
-				<p>If you want to see a mod updated send me a link to the mod using either of the below options:</p>
-				<div class="ui buttons">
-					<a href="http://twitter.com/kaminocoding">
-						<div class="ui blue button">
-							Twitter
-						</div>
-					</a>
-					<div class="or"></div>
-					<a href="http://www.minecraftforum.net/private-messages/send?recipient=Cyb3rWarri0r8">
+		<div class="ui vertical segment">
+			<div class="ui centered page grid">
+				<div class="fourteen wide column">
+					<h1>Web Development</h1>
+					<p>I have started learning JavaScript to add to my skillset of HTML5 and CSS3 development. Most of my work is based on Bootstrap templates but I am learning how to use Semantic UI. This site is actually built using it and I kind of prefer it. Styling Semantic is a goal that I plan on learning how to do. If you want to contact me with a job use my twitter link on the bottom of the page.</p>
+					<p>For a list of projects I've either completed or maintain go here:</p>
+					<a href="about.html">
 						<div class="ui positive button">
-							MinecraftForum
+							Visit My About Page
 						</div>
 					</a>
+				</div>
+			</div>
+		</div>
+
+
+		<div class="ui inverted footer vertical segment">
+			<div class="ui centered page grid">
+				<div class="four wide column">
+					<h3>Thanks for visiting!</h3>
+					<p>If you have any pointers on any of my work or would like for me to do some work for you please use my twitter link to the left.</p>
+				</div>
+				<div class="four wide column">
+					<h3>Contact Me:</h3>
+					<a href="http://twitter.com/kaminocoding">
+						<div class="ui inverted blue button">
+							<i class="twitter icon"></i> Twitter
+						</div>
+					</a>
+					<p></p>
+					<a href="https://github.com/cyb3rwarri0r8">
+						<div class="ui inverted button">
+							<i class="github icon"></i> Github
+						</div>
+					</a>
+				</div>
+				<div class="five wide column">
+					<h3>Mod update requests?</h3>
+					<p>If you want to see a mod updated send me a link to the mod using either of the below options:</p>
+					<div class="ui buttons">
+						<a href="http://twitter.com/kaminocoding">
+							<div class="ui blue button">
+								Twitter
+							</div>
+						</a>
+						<div class="or"></div>
+						<a href="http://www.minecraftforum.net/private-messages/send?recipient=Cyb3rWarri0r8">
+							<div class="ui positive button">
+								MinecraftForum
+							</div>
+						</a>
+					</div>
 				</div>
 			</div>
 		</div>
