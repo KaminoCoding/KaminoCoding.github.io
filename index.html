@@ -40,27 +40,39 @@
 	</style>
 	<script type="text/javascript">
 		// NOTE This is how to use the sidebar
-		/*$(document)
+		$(document)
 			.ready(function () {
 				$('.ui.sidebar')
-					.sidebar('toggle');
-				$('.ui.sidebar')
+					.sidebar();
+				$('.ui.sidebar #mobile')
 					.sidebar('attach', '#toggle');
-			})*/
+			})
 	</script>
 </head>
 
 <body id="home">
 	<div class="ui sidebar left inverted vertical menu" id="mobile"> // TODO
+
 		<a href="index.html" class="item">Home</a>
 		<a href="about.html" class="item">About KaminoCoding</a>
+		<a href="ccmc.html" class="item">CCMC</a>
+		<div class="ui floating dropdown link item">
+			<span class="text">Modding Projects</span>
+			<i class="dropdown icon"></i>
+			<div class="menu">
+				<a href="commumod/" class="item">CommuMod</a>
+				<a href="better-food/" class="item">Better Foods</a>
+				<a href="invincible-hamster/" class="item">Invincible Hamster</a>
+				<a href="friendnamer/" class="item">Friend Namer</a>
+			</div>
+		</div>
 	</div>
 
 	<div class="pusher">
 		<div class="ui masthead segment">
 			<div class="ui centered page grid">
 				<div class="sixteen wide column">
-
+					<a class="ui button" id="toggle"><i class="sidebar icon"></i>&nbsp;Menu</a>
 					<div class="ui inverted red menu">
 
 						<a class="header item" href="http://kaminocoding.github.io">

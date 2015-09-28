@@ -44,3 +44,21 @@ html.ios,
 html.ios body {
 	height: initial !important;
 }
+
+@media(max-width: 960px) {
+	.ui.inverted.red.menu {
+		display: none;
+	}
+	#mobile {
+		display: block;
+	}
+	#toggle {
+		display: inherit;
+	}
+}
+
+@media(min-width: 960px) {
+	#toggle {
+		display: none;
+	}
+}
