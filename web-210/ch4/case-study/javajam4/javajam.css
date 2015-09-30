@@ -9,6 +9,10 @@ body {
 	width: 80%;
 	margin-left: auto;
 	margin-right: auto;
+	background-color: #ffffcc;
+	min-width: 700px;
+	max-width: 1024px;
+	box-shadow: 5px 5px 15px black;
 }
 
 #id {

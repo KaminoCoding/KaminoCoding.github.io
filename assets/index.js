@@ -1,3 +1,4 @@
+// Parse a JSON file for data on CommuMod release versions
 $(document)
 	.ready(function () {
 		var bindElements = function () {
@@ -51,3 +52,21 @@ $(document)
 
 	});
 //		});
+
+// Try getting build artifacts from CircleCi
+$(document).ready(function () {
+	jQuery.getJSON("https://circleci.com/api/v1/project/KaminoCoding/CommuMod?circle-token=5d299a175cb039ff37049302a857d708b1d17d05&limit=2", function (data) {
+		var artifacts = [];
+		$.each(data, function (key, val) {
+			if (data[0].key == "build_num") {
+				jQuery.getJSON("https://circleci.com/api/v1/project/KaminoCoding/CommuMod/" + val + "/artifacts?circle-token=5d299a175cb039ff37049302a857d708b1d17d05", function (rData) {
+					$.each(data, function (key, val) {
+						if (key == "url") {
+							console.log(val);
+						}
+					});
+				});
+			}
+		});
+	});
+});

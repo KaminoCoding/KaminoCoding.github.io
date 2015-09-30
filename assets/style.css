@@ -61,4 +61,11 @@ html.ios body {
 	#toggle {
 		display: none;
 	}
+	#comHeader {
+		box-sizing: 75%;
+	}
+}
+
+#comStat {
+	line-height: 5em;
 }
