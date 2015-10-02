@@ -48,6 +48,7 @@ html.ios body {
 	height: initial !important;
 }
 
+/*
 @media(max-width: 960px) {
 	.ui.inverted.red.menu {
 		display: none;
@@ -72,6 +73,7 @@ html.ios body {
 #comStat {
 	line-height: 5em;
 }
+*/
 
 /* @media all and (max-width:630px) {
     #m_button{

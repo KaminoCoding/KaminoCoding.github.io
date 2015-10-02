@@ -41,23 +41,24 @@
 	</style>
 	<script type="text/javascript">
 		// NOTE This is how to use the sidebar
-		$(function () {
-			$('#toggle')
-				.on("tap", function (e) {
-					e.preventDefault();
-					$('#mobile')
-						.sidebar('toggle');
-				});
-		});
-		$(document)
-			.ready(function () {
-				$('#mobile_dropdown')
-					.dropdown('toggle');
-			});
+		//		$(function () {
+		//			$('#toggle')
+		//				.on("tap", function (e) {
+		//					e.preventDefault();
+		//					$('#mobile')
+		//						.sidebar('toggle');
+		//				});
+		//		});
+		//		$(document)
+		//			.ready(function () {
+		//				$('#mobile_dropdown')
+		//					.dropdown('toggle');
+		//			});
 	</script>
 </head>
 
 <body id="home">
+	<!--
 	<nav class="ui sidebar left inverted vertical slide out menu" id="mobile"> // TODO
 
 		<a href="index.html" class="item">Home</a>
@@ -74,6 +75,7 @@
 			</div>
 		</div>
 	</nav>
+-->
 	<!-- <div class="ui labeled icon button blue" id="m_button">
     <i class="icon list layout"></i>Menu
 </div> -->
@@ -81,7 +83,7 @@
 		<div class="ui masthead segment">
 			<div class="ui centered page grid">
 				<div class="sixteen wide column">
-					<a class="ui button" id="toggle"><i class="sidebar icon"></i>&nbsp;Menu</a>
+					<!--					<a class="ui button" id="toggle"><i class="sidebar icon"></i>&nbsp;Menu</a>-->
 					<div class="ui inverted red menu">
 
 						<a class="header item" href="http://kaminocoding.github.io">
@@ -320,7 +322,7 @@
 	<script type="text/javascript">
 		$(document)
 			.ready(function () {
-				$('.ui.menu .dropdown')
+				$('.ui.inverted.red.menu .dropdown')
 					.dropdown();
 				$('.dropdown')
 					.dropdown({
