@@ -14,6 +14,7 @@
 	<link rel="stylesheet" href="assets/style.css">
 
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.js"></script>
+    <script src="assets/jquery.mobile.custom.min.js"></script>
 	<script src="semantic/dist/semantic.js"></script>
 	<style type="text/css">
 		/*
@@ -42,7 +43,7 @@
 		// NOTE This is how to use the sidebar
 		$(function () {
 			$('#toggle')
-            .on('click', function (e) {
+            .on("tap", function (e) {
                 e.preventDefault();
                     $('#mobile')
                         .sidebar('toggle');
