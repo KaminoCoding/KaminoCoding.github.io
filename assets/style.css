@@ -31,7 +31,10 @@ a.link:hover:before {
 	transform: scaleX(1);
 }
 
-.sticky {
+footer,
+.sticky,
+.footer {
+	position: fixed;
 	bottom: 0;
 }
 
