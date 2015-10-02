@@ -56,7 +56,7 @@ html.ios body {
 		display: block;
 	}
 	#toggle {
-		display: inherit;
+		display: block;
 	}
 }
 
@@ -72,3 +72,10 @@ html.ios body {
 #comStat {
 	line-height: 5em;
 }
+
+/* @media all and (max-width:630px) {
+    #m_button{
+        display: inline-block;
+    }
+} */
+

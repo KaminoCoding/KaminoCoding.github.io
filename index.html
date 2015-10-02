@@ -40,18 +40,19 @@
 	</style>
 	<script type="text/javascript">
 		// NOTE This is how to use the sidebar
-		$(document)
-			.ready(function () {
-				$('.ui.sidebar')
-					.sidebar();
-				$('.ui.sidebar #mobile')
-					.sidebar('attach', '#toggle');
-			})
+		$(function () {
+			$('#toggle')
+            .on('click', function (e) {
+                e.preventDefault();
+                    $('#mobile')
+                        .sidebar('toggle');
+                });
+		});
 	</script>
 </head>
 
 <body id="home">
-	<div class="ui sidebar left inverted vertical menu" id="mobile"> // TODO
+	<nav class="ui sidebar left inverted vertical slide out menu" id="mobile"> // TODO
 
 		<a href="index.html" class="item">Home</a>
 		<a href="about.html" class="item">About KaminoCoding</a>
@@ -66,8 +67,10 @@
 				<a href="friendnamer/" class="item">Friend Namer</a>
 			</div>
 		</div>
-	</div>
-
+	</nav>
+<!-- <div class="ui labeled icon button blue" id="m_button">
+    <i class="icon list layout"></i>Menu
+</div> -->
 	<div class="pusher">
 		<div class="ui masthead segment">
 			<div class="ui centered page grid">
@@ -184,7 +187,7 @@
 				</div>
 			</div>
 		</div>
-		<!--	<div class="pusher">-->
+		<!--			<div class="pusher">-->
 		<div class="ui vertical segment">
 			<div class="ui centered page grid">
 				<div class="fourteen wide column">
