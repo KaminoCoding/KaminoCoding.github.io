@@ -1,0 +1,40 @@
+#id {
+    float: left;
+    background-color: beige;
+    font-family: Veranda, Sans-serif;
+    padding: 20px;
+}
+
+.class {
+    text-decoration: dotted;
+    color: lightsteelblue;
+    font-size: 200%;
+}
+
+#absolute {
+    position: absolute;
+    margin-top: 20px;
+    margin-right: 40px;
+    background-color: lightgrey;
+    border: solid;
+}
+
+.relative {
+    position: relative;
+    left: 15px;
+    background-color: lightgreen;
+
+}
+
+#five {
+    position: fixed;
+    background-color: lightgrey;
+    font-weight: bold;
+    padding: 10px;
+}
+
+ul {
+    list-style-image: url("myimage.gif");
+    list-style: square;
+}
+

@@ -1,0 +1,21 @@
+body {
+    background-color: #BBDEFB;
+}
+a {
+    color:#2196F3;
+    text-decoration: none;
+    -webkit-transition: color 0.3s ease-in-out;
+    -moz-transition: color 0.3s ease-in-out;
+    -ms-transition: color 0.3s ease-in-out;
+    -o-transition: color 0.3s ease-in-out;
+    transition: color 0.3s ease-in-out;
+}
+a:hover {
+    color:#D50000;
+}
+a:visited {
+    color:#FF1744;
+}
+ul {
+    list-style: none;
+}

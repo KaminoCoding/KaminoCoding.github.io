@@ -10,13 +10,15 @@ $(document)
 					allowCategorySelection: true,
 					transition: 'drop'
 				});
-			$('.ui.popup .item')
+			$('.ui.popup')
 				.popup();
 			$('#downloads .item')
 				.popup({
 					on: 'hover',
 					transition: 'fade up',
-					title: 'Minecraft Version'
+					title: 'Minecraft Version',
+					inline: true,
+					variation: 'inverted'
 				});
 			/*$('.ui.dropdown.button') .dropdown({ on: 'hover', transition: 'fly up' });*/
 		};
@@ -49,24 +51,32 @@ $(document)
 			}).appendTo("#downloads");
 			bindElements();
 		});
+		// Try getting build artifacts from CircleCi
+		var getBuildArtifacts = function() {
+		jQuery.ajax("https://circleci.com/api/v1/project/KaminoCoding/CommuMod?circle-token=5d299a175cb039ff37049302a857d708b1d17d05&limit=2", "application/json").success(function (data) {
+			var artifacts = [];
+			var buildInfo = $.parseJSON(data);
+			$.each(buildInfo, function (key, value) {
+				if (buildInfo[key] == "build_num") {
+					jQuery.ajax("https://circleci.com/api/v1/project/KaminoCoding/CommuMod/" + buildInfo[key].value + "/artifacts?circle-token=5d299a175cb039ff37049302a857d708b1d17d05", "application/json").success(function (rData) {
+						var builds = $.parseJSON(rData);
+						$.each(builds, function (key1, val1) {
+							if (builds[key] == "url") {
+								console.warn(rData[key1].val1)
+							}
+						});
+					});
+				}
+			});
+		});
+		};
+		getBuildArtifacts();
 
 	});
+
 //		});
 
-// Try getting build artifacts from CircleCi
+
 $(document).ready(function () {
-	jQuery.getJSON("https://circleci.com/api/v1/project/KaminoCoding/CommuMod?circle-token=5d299a175cb039ff37049302a857d708b1d17d05&limit=2", function (data) {
-		var artifacts = [];
-		$.each(data, function (key, val) {
-			if (data[0].key == "build_num") {
-				jQuery.getJSON("https://circleci.com/api/v1/project/KaminoCoding/CommuMod/" + val + "/artifacts?circle-token=5d299a175cb039ff37049302a857d708b1d17d05", function (rData) {
-					$.each(data, function (key, val) {
-						if (key == "url") {
-							console.log(val);
-						}
-					});
-				});
-			}
-		});
-	});
+
 });
