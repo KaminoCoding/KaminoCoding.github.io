@@ -20,6 +20,13 @@ $(document)
 					inline: true,
 					variation: 'inverted'
 				});
+			$('#builds .item')
+				.popup({
+					on: 'hover',
+					title: 'Build',
+					inline: true,
+					variation: 'inverted'
+				});
 			/*$('.ui.dropdown.button') .dropdown({ on: 'hover', transition: 'fly up' });*/
 		};
 
@@ -49,34 +56,25 @@ $(document)
 				class: "ui selection list",
 				html: $.merge(versions1, versions)
 			}).appendTo("#downloads");
-			bindElements();
+
 		});
 		// Try getting build artifacts from CircleCi
-		var getBuildArtifacts = function() {
-		jQuery.ajax("https://circleci.com/api/v1/project/KaminoCoding/CommuMod?circle-token=5d299a175cb039ff37049302a857d708b1d17d05&limit=2", "application/json").success(function (data) {
+
+
+
 			var artifacts = [];
-			var buildInfo = $.parseJSON(data);
-			$.each(buildInfo, function (key, value) {
-				if (buildInfo[key] == "build_num") {
-					jQuery.ajax("https://circleci.com/api/v1/project/KaminoCoding/CommuMod/" + buildInfo[key].value + "/artifacts?circle-token=5d299a175cb039ff37049302a857d708b1d17d05", "application/json").success(function (rData) {
-						var builds = $.parseJSON(rData);
-						$.each(builds, function (key1, val1) {
-							if (builds[key] == "url") {
-								console.warn(rData[key1].val1)
-							}
-						});
-					});
-				}
+			// This works to get the JSON and loop through items
+			jQuery.getJSON("https://circleci.com/api/v1/project/KaminoCoding/CommuMod?circle-token=bc8edde1a6cefb853e1e5236445e427c4983e970&limit=6", function (data2) {
+				$.each(data2, function (index, value) {
+					artifacts.push("<div class='item' data-content='"+data2[index].status+"'><a href='"+data2[index].build_url+"#artifacts' class='link'>Build Number: "+data2[index].build_num+"</a></div>")
+				});
+				$('<div/>', {
+					class: 'ui selection list',
+					html: artifacts
+				}).appendTo("#builds");
+				bindElements();
 			});
-		});
-		};
-		getBuildArtifacts();
+
+
 
 	});
-
-//		});
-
-
-$(document).ready(function () {
-
-});
