@@ -36,11 +36,63 @@ a.link:hover:before {
 	transform: scaleX(1);
 }
 
+a.light-link {
+	position: relative;
+	color: #EEEEEE;
+	text-decoration: none;
+	-webkit-transition: color 0.3s ease-in-out 0s;
+	-moz-transition: color 0.3s ease-in-out 0s;
+	-ms-transition: color 0.3s ease-in-out 0s;
+	-o-transition: color 0.3s ease-in-out 0s;
+	transition: color 0.3s ease-in-out 0s;
+}
+
+a.light-link:hover {
+	color: #EEEEEE;
+}
+
+a.light-link:before {
+	content: "";
+	position: absolute;
+	width: 100%;
+	height: 2px;
+	bottom: 0;
+	left: 0;
+	background-color: #EEEEEE;
+	visibility: hidden;
+	-webkit-transform: scaleX(0);
+	transform: scaleX(0);
+	-webkit-transition: all 0.2s ease-in-out 0s;
+	transition: all 0.2s ease-in-out 0s;
+}
+
+a.light-link:hover:before {
+	visibility: visible;
+	-webkit-transform: scaleX(1);
+	transform: scaleX(1);
+}
 footer,
 .sticky,
 .footer {
 	position: fixed;
 	bottom: 0;
+}
+
+.dark-grey {
+	background-color: #424242;
+}
+
+.dark-purple {
+	background-color: #4a148c !important;
+
+}
+
+.light-blue-text {
+	color: #90CAF9 !important;
+}
+
+.dark-orange {
+	background-color: #bf360c !important;
 }
 
 html.ios {
