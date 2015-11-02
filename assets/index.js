@@ -23,6 +23,7 @@ $(document)
 			$('#builds .item')
 				.popup({
 					on: 'hover',
+					transition: 'slide up',
 					title: 'Build',
 					inline: true,
 					variation: 'inverted'
@@ -56,7 +57,7 @@ $(document)
 				class: "ui selection list",
 				html: $.merge(versions1, versions)
 			}).appendTo("#downloads");
-
+			bindElements();
 		});
 		// Try getting build artifacts from CircleCi
 
