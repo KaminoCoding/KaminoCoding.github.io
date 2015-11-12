@@ -28,6 +28,14 @@ $(document)
 					inline: true,
 					variation: 'inverted'
 				});
+			$('.ui.accordion')
+					.accordion();
+            $('.ui.accordion')
+                .accordion({
+                selectors: {
+                    trigger: '.title'
+                }
+            });
 			/*$('.ui.dropdown.button') .dropdown({ on: 'hover', transition: 'fly up' });*/
 		};
 
@@ -65,9 +73,9 @@ $(document)
 
 			var artifacts = [];
 			// This works to get the JSON and loop through items
-			jQuery.getJSON("https://circleci.com/api/v1/project/KaminoCoding/CommuMod?circle-token=bc8edde1a6cefb853e1e5236445e427c4983e970&limit=6", function (data2) {
+			jQuery.getJSON("https://circleci.com/api/v1/project/KaminoCoding/CommuMod?circle-token=bc8edde1a6cefb853e1e5236445e427c4983e970", function (data2) {
 				$.each(data2, function (index, value) {
-					artifacts.push("<div class='item' data-content='"+data2[index].status+"'><a href='"+data2[index].build_url+"#artifacts' class='light-link'>Build Number: "+data2[index].build_num+"</a></div>")
+					artifacts.push("<div class='item' data-content='"+data2[index].status+"'><a href='"+data2[index].build_url+"#artifacts' class='link'>Build Number: "+data2[index].build_num+"</a></div>")
 				});
 				$('<div/>', {
 					class: 'ui selection list',
