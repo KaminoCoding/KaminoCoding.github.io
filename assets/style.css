@@ -105,6 +105,13 @@ html.ios body {
 	height: initial !important;
 }
 
+#failed {
+	background-color: #B71C1C;
+}
+
+#fixed {
+	background-color: #1B5E20;
+}
 /*
 @media(max-width: 960px) {
 	.ui.inverted.red.menu {
