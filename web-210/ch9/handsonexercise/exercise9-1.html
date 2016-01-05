@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Form</title>
+</head>
+<body>
+	<div id="container">
+		<form action="http://webdevfoundations.net/scripts/demo.asp" method="post">
+			<label for="username">Username</label>
+			<input id="username" type="text" max="30" aria-valuemax="30" maxlength="30">
+
+			<label for="favDay">Pick Your Favorite Day of the Week</label>
+			<fieldset id="favDay">
+				<label for="monday">Monday</label>
+				<input name="day" type="radio" id="monday"><br>
+				<label for="tuesday">Tuesday</label>
+				<input name="day" type="radio" id="tuesday"><br>
+				<label for="wednesday">Wednesday</label>
+				<input name="day" type="radio" id="wednesday"><br>
+				<label for="thursday">Thursday</label>
+				<input name="day" type="radio" id="thursday"><br>
+				<label for="friday">Friday</label>
+				<input name="day" type="radio" id="friday"><br>
+				<label for="saturday">Saturday</label>
+				<input name="day" type="radio" id="saturday"><br>
+				<label for="sunday">Sunday</label>
+				<input name="day" type="radio" id="sunday"><br>
+			</fieldset>
+			<!-- /#favDay -->
+
+			<label for="favNetwork">Pick Your Favorite Social Network</label>
+			<select name="favSocialNetwork" id="favNetwork">
+				<option value="#">None</option>
+				<option value="facebook">Facebook</option>
+				<option value="twitter">Twitter</option>
+				<option value="instagram">Instagram</option>
+				<option value="snapchat">Snapchat</option>
+				<option value="linkedin">Linkedin</option>
+				<option value="tumblr">Tumblr</option>
+			</select>
+			<!-- /#favNetwork -->
+
+			<fieldset>
+				<label for="addressline1">Address Line 1</label><br>
+				<input type="text" id="addressline1"><br>
+				<label for="addressline2">Address Line 2</label><br>
+				<input type="text" id="addressline2"><br>
+				<label for="city">City</label>
+				<input type="text" id="city"><br>
+				<label for="state">State</label>
+				<input type="text" id="state"><br>
+				<label for="zip">Zip Code</label>
+				<input type="number" id="zip" size="5">
+			</fieldset>
+
+			<input type="hidden" id="userid">
+			<label for="password">Password</label>
+			<input type="password" id="password"><br>
+
+			<input type="submit" src="signup.gif" alt="Login Button">
+
+		</form>
+	</div>
+	<!-- /#container -->
+</body>
+</html>

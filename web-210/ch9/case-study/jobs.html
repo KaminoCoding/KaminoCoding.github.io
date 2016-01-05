@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>JavaJam Coffee House Menu</title>
+	<link rel="stylesheet" href="javajam.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+	<div id="wrapper">
+		<header>
+			<h1>JavaJam Coffee House</h1></header>
+		<nav >
+			<ul>
+				<li><a href="index.html">Home</a></li>
+				<li><a href="menu.html">Menu</a></li>
+				<li><a href="music.html">Music</a></li>
+				<li><a href="jobs.html">Jobs</a></li>
+			</ul>
+
+		</nav>
+
+		<main>
+			<p>Want to work at JavaJam? Fill out the form below to start your application. <br>
+				<small>Required fields are marked with an *</small>
+			</p>
+
+			<form action="http://webdevbasics.net/scripts/javajam.php" method="post">
+				<label for="name">*Name:</label>
+				<input required="required" type="text" id="name" name="myName"><br>
+				<label for="email">*E-mail:</label>
+				<input required="required" type="email" id="email" name="myEmail"><br>
+				<label for="experience">*Experience:</label>
+				<textarea required="required" name="experience" id="experience" cols="20" rows="2"></textarea><br>
+				<input type="submit" value="Apply Now!" id="mySubmit">
+				<!-- /#experience -->
+			</form>
+		</main>
+
+		<footer>
+			<p><small><i>Copyright &copy; 2015 JavaJam Coffee House <br>
+					<a href="mailto:noah@kovacs.com">noah@kovacs.com</a>
+		</i></small></p>
+		</footer>
+	</div>
+</body>
+
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Music Survey</title>
+
+	<style type="text/css">
+		div {
+			display: block;
+			margin-left: auto;
+			margin-right:auto;
+		}
+		footer {
+			display: block;
+			margin: 0 auto;
+			width: 500px;
+		}
+		#container {
+			align-content: center;
+		}
+	</style>
+</head>
+<body>
+	<div id="container">
+		<h1>Music Survey</h1>
+
+		<form action="">
+			<label for="name">Name: </label><br>
+			<input type="text" id="name"><br>
+			<label for="email">Email: </label><br>
+			<input type="email" id="email"><br>
+			<label for="favMusic">Select Your Favorite Types of Music</label>
+			<fieldset id="favMusic">
+				<input type="checkbox" name="music" id="pop"><label for="pop">&nbsp;Pop</label><br>
+				<input type="checkbox" name="music" id="classical"><label for="classical">&nbsp;Classical</label><br>
+				<input type="checkbox" name="music" id="rock"><label for="rock">&nbsp;Rock</label><br>
+				<input type="checkbox" name="music" id="folk"><label for="folk">&nbsp;Folk</label><br>
+				<input type="checkbox" name="music" id="rap"><label for="rap">&nbsp;Rap</label><br>
+				<input type="checkbox" name="music" id="other"><label for="other">&nbsp;Other</label>
+			</fieldset>
+			<label for="oftenPurchase">Select how often you purchase Music CDs:</label>
+			<fieldset id="oftenPurchase">
+				<input type="radio" name="purchaseOften" id="weekly">
+				<label for="weekly">&nbsp;Weekly</label><br>
+				<input type="radio" name="purchaseOften" id="fewayear">
+				<label for="fewayear">&nbsp;A few CDs each year</label>
+				<br>
+				<input type="radio" name="purchaseOften" id="monthly">
+				<label for="monthly">Monthly</label>
+				<br>
+				<input type="radio" name="purchaseOften" id="never">
+				<label for="never">&nbsp;Never Purchase</label>
+
+			</fieldset>
+
+			<label for="where">Select the locations you listen to Music:</label><br>
+			<select name="where" id="where" size="4">
+				<option value="home">At Home</option>
+				<option value="car">In the car</option>
+				<option value="anywhere">Anywhere (MP3 Player)</option>
+			</select>
+			<!-- /#where -->
+			<br>
+			<label for="roleinlife">What role does music play in your life?</label><br>
+			<textarea name="roleinlife" id="roleinlife" cols="100" rows="10"></textarea>
+			<!-- /#roleinlife -->
+			<br>
+			<input type="reset">
+			<input type="submit">
+		</form>
+
+		<footer style="position: fixed; bottom: 0; width: 100%;">
+			<div style="">
+				<p style="text-align: center">&copy;&nbsp;Noah Kovacs, noah@kovacs.com</p>
+			</div>
+		</footer>
+	</div>
+	<!-- /#container -->
+</body>
+</html>
