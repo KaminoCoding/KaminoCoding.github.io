@@ -41,6 +41,15 @@ $(document)
 
 		//			$("button").click(function () {
 		jQuery.getJSON("http://widget.mcf.li/mc-mods/minecraft/220860-commumod.json", function (data) {
+			var versions2 = [];
+			$.each(data.versions["1.8"], function (key, val) {
+				if (data.versions["1.8"][key].type == "beta" | data.versions["1.8"][key].type == "alpha") {
+					versions1.push("<div class='item' data-content='1.8'><a href='" + data.versions["1.8"][key].url + "' class='light-link'>" + data.versions["1.8"][key].name + "&nbsp;</a><div class='ui right floated red label'>" + data.versions["1.8"][key].type + "</div></div>");
+				} else {
+					versions1.push("<div class='item' data-content='1.8'><a href='" + data.versions["1.8"][key].url + "' class='light-link'>" + data.versions["1.8"][key].name + "&nbsp;</a><div class='ui right floated blue label'>" + data.versions["1.8"][key].type + "</div></div>");
+				}
+
+			});
 			var versions1 = [];
 			$.each(data.versions["1.7.10"], function (key, val) {
 				if (data.versions["1.7.10"][key].type == "beta" | data.versions["1.7.10"][key].type == "alpha") {
@@ -92,7 +101,6 @@ $(document)
 
 				bindElements();
 			});
-
 
 
 	});
