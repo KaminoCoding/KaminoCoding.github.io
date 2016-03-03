@@ -112,6 +112,13 @@ html.ios body {
 #fixed {
 	background-color: #1B5E20;
 }
+
+.copyright {
+	font-size: 1.2em;
+    font-weight: 600;
+
+}
+
 /*
 @media(max-width: 960px) {
 	.ui.inverted.red.menu {
