@@ -181,7 +181,7 @@ $ ( document )
                     console.log(path[i]);
                     var matchGroups = pathPattern.exec(path[i]);
                     console.log(pathPattern.exec(path[i]));
-                    s3ArtifactURLs.push("<div class='item' data-content='" + matchGroups[5]+"-"+matchGroups[6] + "' id=''><a href='" + bURL+path[i] + "' class='link'>" + matchGroups[5]+"-"+matchGroups[6] + "</a></div>")
+                    s3ArtifactURLs.push("<div class='item' data-content='" + matchGroups[4]+"-"+matchGroups[5] + "' id=''><a href='" + bURL+path[i] + "' class='link'>" + matchGroups[4]+"-"+matchGroups[5] + "</a></div>")
                 }else {
                     console.log("The URL "+path[i]+" does not link to a jar")
                 }
