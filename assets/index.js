@@ -35,6 +35,10 @@ $ ( document )
                         trigger : '.title'
                     }
                 } );
+            $('.ui.modal')
+                .modal();
+            $('.ui.modal')
+                .modal('attach events', '#reportBugButton', 'toggle');
             /*$('.ui.dropdown.button') .dropdown({ on: 'hover', transition: 'fly up' });*/
         };
 
@@ -81,7 +85,7 @@ $ ( document )
         var testArtifacts = [];
         var artifacts = [];
         // This works to get the JSON and loop through items
-        jQuery.getJSON ( "https://circleci.com/api/v1/project/KaminoCoding/CommuMod/tree/release/V.-2.0?circle-token=bc8edde1a6cefb853e1e5236445e427c4983e970&limit=40" ).done ( function ( data2 ) {
+        /*jQuery.getJSON ( "https://circleci.com/api/v1/project/KaminoCoding/CommuMod/tree/release/V.-2.0?circle-token=bc8edde1a6cefb853e1e5236445e427c4983e970&limit=40" ).done ( function ( data2 ) {
             var data = [];
             var index;
             for ( index = 1; index < data2.length; index++ ) {
@@ -108,7 +112,7 @@ $ ( document )
                 html : artifacts
             } ).appendTo ( "#buildsEight" );
             bindElements ();
-        } );
+        } );*/
 
         // Initialize the Amazon Cognito credentials provider
         AWS.config.region = 'us-east-1'; // Region
@@ -173,7 +177,7 @@ $ ( document )
                 class: "ui selection list",
                 html: url
             } ).appendTo('#buildsEight');
-
+            bindElements();
         } );
         function filterArtifacts(path, bURL) {
             for (var i = 1; i < path.length; i++) {
@@ -190,4 +194,19 @@ $ ( document )
             return s3ArtifactURLs;
         }
 
+        var token = "15bfd9bffc7a214e40bc98a8eaf9231f6f20dc15";
+
     });
+$(document).ready(function() {
+    $('#submitM').click(function () {
+        $('#bugSubmit').form('submit');
+    });
+
+    $('#bugSubmit').submit(function (e) {
+        e.preventDefault();
+        var sum = [];
+        $('#bugSubmit').each(function () {
+
+        });
+    })
+});

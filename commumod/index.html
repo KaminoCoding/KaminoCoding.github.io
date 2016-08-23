@@ -12,12 +12,8 @@
 
 	<link rel="stylesheet" type="text/css" href="../semantic/dist/semantic.css">
 	<link rel="stylesheet" href="../assets/style.css">
-	<link rel="stylesheet" href="../assets/pace-corner.css"/>
-	<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.0/jquery.js"></script>
-	<script src="https://sdk.amazonaws.com/js/aws-sdk-2.2.39.min.js"></script>
-	<script src="../semantic/dist/semantic.js"></script>
-	<script src="../assets/pace.min.js"></script>
-	<script src="../assets/chance.min.js"></script>
+	<link rel="stylesheet" href="../assets/pace-flat-top.css"/>
+
 	<style type="text/css">
 		/*
         #home{
@@ -42,7 +38,6 @@
 		}
 	</style>
 
-	<script src="../assets/index.js"></script>
 
 	<script type="text/javascript">
 
@@ -197,11 +192,33 @@
 				<div class="ui list">
 					<div class="item">None AFAIK</div>
 				</div>
-				<a href="https://github.com/cyb3rwarri0r8/commumod/issues">
-					<div class="ui blue button">Report a Bug</div>
-				</a>
+				<div class="ui blue button" id="reportBugButton">Report a Bug</div>
 			</div>
 
+			<div class="ui modal">
+				<i class="close icon"></i>
+				<div class="header"></div>
+				<!-- /.header -->
+				<div class="content">
+					<div class="description">
+						<div class="ui header">Bug Report</div>
+						<form class="ui form" id="bugSubmit">
+							<div class="required field"><label>Title</label><input type="text" placeholder="Issue Title" id="title"></div>
+							<div class="field"><label>Details:&nbsp;(Optional)</label><textarea placeholder="Description" id="details"></textarea></div>
+						</form>
+						<!-- /.ui form -->
+					</div>
+				</div>
+				<div class="actions">
+					<div class="ui positive right labeled icon button" id="submitM">
+						Submit
+						<i class="checkmark icon"></i>
+						<!-- /.checkmark icon -->
+					</div>
+					<!-- /.ui positive right labeled icon button -->
+					<!-- /.actions -->
+				</div>
+			</div>
 			<div class="seven wide column">
 				<h2 class="ui inverted header">Changelog:</h2>
 				<div class="ui inverted list">
@@ -292,6 +309,12 @@
 			</div>
 		</div>
 	</div>
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.0/jquery.js"></script>
+	<script src="https://sdk.amazonaws.com/js/aws-sdk-2.2.39.min.js"></script>
+	<script src="../semantic/dist/semantic.js"></script>
+	<script src="../assets/pace.min.js"></script>
+	<script src="../assets/chance.min.js"></script>
+	<script src="../assets/index.js"></script>
 </body>
 
 </html>
